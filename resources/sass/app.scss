@@ -1,0 +1,93 @@
+@charset "utf-8";
+// @import "~bulma/sass/utilities/_all.sass";
+// @import "~bulma/sass/utilities/initial-variables.sass";
+// @import "~bulma/sass/utilities/derived-variables.sass";
+// @import "~bulma/sass/utilities/mixins.sass";
+
+// NOTE Custom Styles
+$primary: #f48603;
+
+
+// Rest of Bulma
+@import "~bulma/bulma.sass";
+// @import "~bulma/sass/base/_all.sass";
+// @import "~bulma/sass/components/_all.sass";
+// @import "~bulma/sass/elements/_all.sass";
+// @import "~bulma/sass/form/_all.sass";
+// @import "~bulma/sass/grid/_all.sass";
+// @import "~bulma/sass/helpers/_all.sass";
+// @import "~bulma/sass/layout/_all.sass";
+// @import "~bulma/sass/utilities/_all.sass";
+
+// NOTE Extensions
+@import "resources/sass/extensions/_all";
+
+// NOTE Fixed Some Style
+// Fix Dropdown Navigation on mobile
+@include mobile {
+  .navbar-item {
+    &.has-dropdown {
+      .navbar-dropdown {
+        display: none;
+      }
+
+      &.is-hoverable:hover {
+        .navbar-dropdown {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// NOTE Include Bulma Mixins
+// .bulma-center-mixin {
+//   @include center;
+// }
+
+.bulma-placeholder-mixin {
+  @include placeholder {
+    color: lightblue;
+  }
+}
+
+.bulma-clearfix-mixin {
+  @include clearfix;
+}
+
+.bulma-reset-mixin {
+  @include reset;
+}
+
+.bulma-unselectable-mixin {
+  @include unselectable;
+}
+
+$box-shadow: 0 0.5em 0.2em -0.125em rgba($scheme-invert, 0.1), 0 0px 0 1px rgba($scheme-invert, 0.02);
+
+
+// NOTE Custom Styles
+.section {
+  padding: 1.5rem;
+}
+
+.footer {
+  padding: 3rem 1.5rem;
+}
+
+// Fix Carousel Container
+.carousel,
+.hero-carousel {
+  overflow: hidden;
+}
+
+.line-clamp {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  @for $i from 1 through 10 {
+    &.is-line-clamp-#{$i} {
+      -webkit-line-clamp: $i;
+    }
+  }
+}
