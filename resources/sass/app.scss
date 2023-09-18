@@ -21,6 +21,7 @@ $primary: #f48603;
 
 // NOTE Extensions
 @import "resources/sass/extensions/_all";
+// @import "custom/_all";
 
 // NOTE Fixed Some Style
 // Fix Dropdown Navigation on mobile
@@ -91,3 +92,5 @@ $box-shadow: 0 0.5em 0.2em -0.125em rgba($scheme-invert, 0.1), 0 0px 0 1px rgba(
     }
   }
 }
+
+// @import "../../node_modules/bulma-dashboard/dist/bulma-dashboard.min.css";
